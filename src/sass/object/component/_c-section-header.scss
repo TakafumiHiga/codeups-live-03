@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+
+.c-section-header {
+  color: $blue;
+  text-align: center;
+}
+
+.c-section-header__jatitle {
+font-family: $en-font-family;
+font-size: rem(13);
+font-weight: $bold;
+letter-spacing: 0.05em;
+line-height: 1;
+@include mq ('md'){
+  font-size: rem(14);
+}
+}
+
+.c-section-header__entitle {
+  font-family: $en-font-family;
+  font-size: rem(30);
+  font-weight: $bold;
+  letter-spacing: 0.05em;
+  line-height: calc(32 / 30);
+  // 大文字でいれると、単語として認識されるのでCSSが良い
+  text-transform: uppercase;
+  @include mq ('md'){
+    font-size: rem(36);
+  }
+}
+
